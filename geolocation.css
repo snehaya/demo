@@ -1,0 +1,141 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	background-image:url("img/brain.gif");
+	background-size:cover;
+}
+/* container div */
+.container{
+	height:100vh;
+	width:100%;
+}
+
+/* navbar */
+.nav{
+	height:5%;
+	width:100%;
+	background-color:;
+	display:flex;
+	align-items:center;
+	justify-content:space-evenly;
+}
+.sub-part{
+	height:100%;
+	width:70%;
+	background-color:;
+}
+ul{
+	list-style:none;
+}
+li{
+	float:left;
+	padding:2% 6.8%;
+	font-size:17px;
+}
+.a{
+	color:white;
+	text-decoration:none;
+	font-family: 'Poppins', sans-serif;
+}
+.main{
+	height:60%;
+	width:70%;
+	position:relative;
+	left:15%;
+	top:6%;
+	background-color:;
+}
+.main img{
+	height:100%;
+	width:100%;
+	object-fit:cover;
+}
+.get{
+	height:25%;
+	width:70%;
+	position:relative;
+	left:15%;
+	top:8%;
+	background-color:;
+}
+
+.get p{
+	color:white;
+	font-size:25px;
+	text-align:center;
+	padding-top:3%;
+}
+.get1{
+	height:20%;
+	width:70%;
+	position:relative;
+	left:15%;
+	top:12%;
+	background-color:;
+}
+i{
+	color:white;
+	font-size:40px;
+	padding-left:23%;
+}
+.map{
+	position:relative;
+	text-align:right;
+	height:100%;
+	width:100%;
+}
+.gmap{
+	height:100%;
+	width:100%;
+}
+.button{
+	height:5%;
+	width:20%;
+	background-color:white;
+	border:none;
+	color:blue;
+	box-shadow:2px 2px 10px blue;
+	position:absolute;
+	right:38%;
+	top:5%;
+}
+@media only screen and (max-width : 750px){
+	li{
+		padding:5% 3.5%;
+		font-size:14px;
+	}
+	i{
+		font-size:20px;
+		padding-left:12%;
+	}
+	.button{
+		font-size:8px;
+		height:20%;
+	}
+	.get p{
+		font-size:15px;
+	}
+	.sub-part{
+		width:100%;
+	}
+	.nav{
+		height:8%;
+	}
+	.main{
+		height:20%;
+		width:90%;
+		left:5%;
+		top:1%;
+		background-color:;
+	}
+	.get{
+		height:10%;
+		width:90%;
+		left:5%;
+		top:5%;
+		position:relative;
+		background-color:;
+	}
+}

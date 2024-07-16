@@ -1,0 +1,92 @@
+<html>
+	<head>
+		
+		<!-- link for css -->
+		<link rel = "stylesheet" href = "geolocation.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<!-- link for google fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inconsolata&family=Poppins&family=Teko&display=swap" rel="stylesheet">
+		
+		<!-- link for icon -->
+		<link rel = "icon" href="img/loc.jpg">
+		<title>
+			Geolocation
+		</title>
+		
+	</head>
+	<body>
+		
+		<!-- container div -->
+		<section class="container">
+			<!-- navbar -->
+			<div class="nav">
+				<div class="sub-part">
+					<ul>
+						<li><a href="" class="a">Home</a></li>
+						<li><a href="" class="a">About</a></li>
+						<li><a href="" class="a">Game Zone</a></li>
+						<li><a href="" class="a">Video</a></li>
+						<li><a href="" class="a">login</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- main div -->
+			<div class="main">
+				<div class="map">
+					<div class="gmap">
+						<iframe width="100%" height="100%" id="gmap" src="https://maps.google.com/maps?q=california&t=&z=10&ie=UTF8&iwloc=&output=embed" frameborder="0">
+						</iframe>
+						<button id="show-my-location" class="button">Show My Location</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="get">
+				<i>Get Your Current Location here</i>
+				<p id="location">hello</p>
+			</div>
+			<!-- footer -->
+			<div class="get1" id="map">
+	
+			</div>
+		</section>
+		
+		
+		<script>
+		
+		var x = document.getElementById("location");
+		function getLocation() {
+			  if (navigator.geolocation) {
+				navigator.geolocation.watchPosition(showPosition);
+			  } else {
+				x.innerHTML = "Geolocation is not supported by this browser.";
+			  }
+		}
+		function showPosition(position) {
+		  var b = "Latitude: " + position.coords.latitude +
+		  "<br>Longitude: " + position.coords.longitude;
+		  x.innerHTML = b;
+		  
+		}
+		
+		var showMyLocationButton = document.getElementById('show-my-location');
+		showMyLocationButton.addEventListener('click', function() {
+			navigator.geolocation.watchPosition(function(position) {
+				var latitude = position.coords.latitude;
+				var longitude = position.coords.longitude;
+				var mapUrl = 'https://maps.google.com/maps?q=' + latitude + ',' + longitude + '&output=embed';
+				document.getElementById('gmap').src = mapUrl;
+			});
+		});
+		
+		getLocation();
+		</script>
+	</body>
+</html>
+
+
+
+
